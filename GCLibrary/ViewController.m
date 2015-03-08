@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "GCDate.h"
+
 
 @interface ViewController ()
 
@@ -16,12 +18,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    //[GCDateFormatter getDateArrayForInterval:interval fromDate:[NSDate date] toDate: ]
+    NSDate * openHour = [GCDate createDateWithHour:20 andMinutes:30];
+    NSDate * myDate = [GCDate createDateWithHour:22 andMinutes:30];
+    NSArray * myArray = [GCDate getDateArrayFromOpenHour:openHour toDate:myDate];
+    NSString *dateStr;
+    NSDateFormatter *dateFormatters = [[NSDateFormatter alloc] init];
+    [dateFormatters setDateFormat:@"dd-MMM-yyyy hh:mm"];
+    [dateFormatters setDateStyle:NSDateFormatterShortStyle];
+    [dateFormatters setTimeStyle:NSDateFormatterShortStyle];
+    [dateFormatters setDoesRelativeDateFormatting:YES];
+    [dateFormatters setTimeZone:[NSTimeZone systemTimeZone]];
+    dateStr = [dateFormatters stringFromDate: myArray[0]];
+    NSLog(@"%@", dateStr);
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 @end

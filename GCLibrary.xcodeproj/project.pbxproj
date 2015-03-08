@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35920A411AABE67200B95B75 /* GCDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 35920A401AABE67200B95B75 /* GCDate.m */; };
 		35C103291A9BB8620020161B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C103281A9BB8620020161B /* main.m */; };
 		35C1032C1A9BB8620020161B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C1032B1A9BB8620020161B /* AppDelegate.m */; };
 		35C1032F1A9BB8620020161B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C1032E1A9BB8620020161B /* ViewController.m */; };
@@ -14,6 +15,7 @@
 		35C103341A9BB8620020161B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35C103331A9BB8620020161B /* Images.xcassets */; };
 		35C103371A9BB8620020161B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35C103351A9BB8620020161B /* LaunchScreen.xib */; };
 		35C103431A9BB8620020161B /* GCLibraryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C103421A9BB8620020161B /* GCLibraryTests.m */; };
+		35C1034E1A9BB9630020161B /* GCDeviceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C1034D1A9BB9630020161B /* GCDeviceModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		35920A3F1AABE67200B95B75 /* GCDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDate.h; sourceTree = "<group>"; };
+		35920A401AABE67200B95B75 /* GCDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDate.m; sourceTree = "<group>"; };
 		35C103231A9BB8620020161B /* GCLibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GCLibrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35C103271A9BB8620020161B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35C103281A9BB8620020161B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +44,8 @@
 		35C1033C1A9BB8620020161B /* GCLibraryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GCLibraryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		35C103411A9BB8620020161B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35C103421A9BB8620020161B /* GCLibraryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCLibraryTests.m; sourceTree = "<group>"; };
+		35C1034C1A9BB9630020161B /* GCDeviceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDeviceModel.h; sourceTree = "<group>"; };
+		35C1034D1A9BB9630020161B /* GCDeviceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDeviceModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		35920A421AABE67900B95B75 /* Date */ = {
+			isa = PBXGroup;
+			children = (
+				35920A3F1AABE67200B95B75 /* GCDate.h */,
+				35920A401AABE67200B95B75 /* GCDate.m */,
+			);
+			name = Date;
+			sourceTree = "<group>";
+		};
 		35C1031A1A9BB8620020161B = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +100,7 @@
 				35C1032B1A9BB8620020161B /* AppDelegate.m */,
 				35C1032D1A9BB8620020161B /* ViewController.h */,
 				35C1032E1A9BB8620020161B /* ViewController.m */,
+				35C103501A9BBB620020161B /* Lib */,
 				35C103301A9BB8620020161B /* Main.storyboard */,
 				35C103331A9BB8620020161B /* Images.xcassets */,
 				35C103351A9BB8620020161B /* LaunchScreen.xib */,
@@ -117,6 +133,24 @@
 				35C103411A9BB8620020161B /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		35C1034F1A9BBB530020161B /* Device */ = {
+			isa = PBXGroup;
+			children = (
+				35C1034C1A9BB9630020161B /* GCDeviceModel.h */,
+				35C1034D1A9BB9630020161B /* GCDeviceModel.m */,
+			);
+			name = Device;
+			sourceTree = "<group>";
+		};
+		35C103501A9BBB620020161B /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				35C1034F1A9BBB530020161B /* Device */,
+				35920A421AABE67900B95B75 /* Date */,
+			);
+			name = Lib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,6 +254,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				35C1032F1A9BB8620020161B /* ViewController.m in Sources */,
+				35920A411AABE67200B95B75 /* GCDate.m in Sources */,
+				35C1034E1A9BB9630020161B /* GCDeviceModel.m in Sources */,
 				35C1032C1A9BB8620020161B /* AppDelegate.m in Sources */,
 				35C103291A9BB8620020161B /* main.m in Sources */,
 			);
@@ -412,6 +448,7 @@
 				35C103481A9BB8620020161B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		35C103491A9BB8620020161B /* Build configuration list for PBXNativeTarget "GCLibraryTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +457,7 @@
 				35C1034B1A9BB8620020161B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
